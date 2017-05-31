@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Hugo PacMan Theme Demo</title>
+    <link>http://wfxiong1990.github.io/post/</link>
+    <description>Recent content in Posts on Hugo PacMan Theme Demo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 07 Feb 2017 08:31:33 +0000</lastBuildDate>
+    
+	<atom:link href="http://wfxiong1990.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>美西自驾游总结</title>
+      <link>http://wfxiong1990.github.io/post/self-driving-tour-in-usa/</link>
+      <pubDate>Tue, 07 Feb 2017 08:31:33 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/self-driving-tour-in-usa/</guid>
+      <description>去年三月中旬去的美国，到现在已经快一年了，想写点什么，留给想去的童鞋做参考。 签证 和日本签证不一样，因为涉及到面签，完全可以自己准备材料，自己</description>
+    </item>
+    
+    <item>
+      <title>在树莓派上使用aria2</title>
+      <link>http://wfxiong1990.github.io/post/using-aria2-on-raspberry-pi/</link>
+      <pubDate>Sat, 04 Feb 2017 13:50:49 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/using-aria2-on-raspberry-pi/</guid>
+      <description>认识aria2 国内最流行的网盘是什么？百度盘，各种资源分享，当年申请就有2T容量，不敢用作资料备份，但偶尔下下电影蛮好的。后来限制了下载速度</description>
+    </item>
+    
+    <item>
+      <title>树莓派精简系统DietPi入坑指南</title>
+      <link>http://wfxiong1990.github.io/post/setup-rpi-using-dietpi/</link>
+      <pubDate>Fri, 03 Feb 2017 22:46:10 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/setup-rpi-using-dietpi/</guid>
+      <description>树莓派的官方系统是Raspbian，很稳定，https://www.raspberrypi.org/downloads/，默认不开启SSH，</description>
+    </item>
+    
+    <item>
+      <title>用beautifulsoup解析网页</title>
+      <link>http://wfxiong1990.github.io/post/parse-html-via-beautifulsoup/</link>
+      <pubDate>Wed, 19 Nov 2014 09:37:59 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/parse-html-via-beautifulsoup/</guid>
+      <description>关于BeautifulSoup BeautifulSoup是一个能抓取网页内容并解析的python类库，是学习python写爬虫的一个捷径，官</description>
+    </item>
+    
+    <item>
+      <title>【LeetCode算法训练】 二叉树路径之和</title>
+      <link>http://wfxiong1990.github.io/post/path-sum/</link>
+      <pubDate>Wed, 05 Nov 2014 16:35:07 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/path-sum/</guid>
+      <description>二叉树结构 二叉树的定义如下：http://zh.wikipedia.org/wiki/二叉树。 二叉树是每个节点最多有两个子树的树结构。通常子</description>
+    </item>
+    
+    <item>
+      <title>【LeetCode算法训练】 输出杨辉三角形</title>
+      <link>http://wfxiong1990.github.io/post/pascal-s-triangle/</link>
+      <pubDate>Tue, 04 Nov 2014 23:42:48 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/pascal-s-triangle/</guid>
+      <description>什么是杨辉三角形 如图所示吧，暂时还没来得及学习MarkDown的数学公式的写法 题解 本题目英文说明如下： Given numRows, generate the first numRows of Pascal&#39;s triangle. For example, given numRows = 5, Return [ [1], [1,1],</description>
+    </item>
+    
+    <item>
+      <title>【LeetCode算法训练】 判断字符串是否是回文</title>
+      <link>http://wfxiong1990.github.io/post/valid-palindrome/</link>
+      <pubDate>Tue, 04 Nov 2014 22:45:29 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/valid-palindrome/</guid>
+      <description>什么是LeetCode LeetCode http://weibo.com/leetcode已是一个针对程序员招聘的颇具口碑的准备面试平台。虽然主要针对北美市</description>
+    </item>
+    
+    <item>
+      <title>用python来拷贝文件到指定文件夹并启动对应程序</title>
+      <link>http://wfxiong1990.github.io/post/copying-files-and-run-command-to-start-exe-via-python/</link>
+      <pubDate>Sat, 25 Oct 2014 12:15:16 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/copying-files-and-run-command-to-start-exe-via-python/</guid>
+      <description>码代码目的 因为工作需要，经常要把自己项目下的dll从debug版本拷贝到publish版本，然后启动publish版本下面的exe程序，由于</description>
+    </item>
+    
+    <item>
+      <title>用python实现图灵聊天机器人的接口</title>
+      <link>http://wfxiong1990.github.io/post/using-python-to-call-tuling123-api/</link>
+      <pubDate>Sat, 25 Oct 2014 00:13:03 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/using-python-to-call-tuling123-api/</guid>
+      <description>码这坨代码目的 在知乎上看到，微信公众平台的聊天机器人是怎么搭建？的主题,对图灵机器人感兴趣起来，官方有php和java的实现，那么，pyth</description>
+    </item>
+    
+    <item>
+      <title>利用GitHub Pages 和 Hexo 搭建静态博客</title>
+      <link>http://wfxiong1990.github.io/post/how-to-build-a-blog-system-using-github-and-hexo/</link>
+      <pubDate>Sun, 12 Oct 2014 00:51:20 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/how-to-build-a-blog-system-using-github-and-hexo/</guid>
+      <description>无意中在知乎上看到了这样一个话题：如何在 GitHub 上写博客？ 于是开始自己捣腾，现在分享一下自己搭建博客的一点心得和笔记。 GitHub Pages 给我的感觉就是，给我一个</description>
+    </item>
+    
+  </channel>
+</rss>

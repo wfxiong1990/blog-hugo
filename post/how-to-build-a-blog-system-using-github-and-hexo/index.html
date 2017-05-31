@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>利用GitHub Pages 和 Hexo 搭建静态博客 - Hugo PacMan Theme Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+  
+  <meta name="description" content="无意中在知乎上看到了这样一个话题：如何在 GitHub 上写博客？ 于是开始自己捣腾，现在分享一下自己搭建博客的一点心得和笔记。 GitHub Pages 给我的感觉就是，给我一个">
+  
+  <meta itemprop="name" content="利用GitHub Pages 和 Hexo 搭建静态博客 - Hugo PacMan Theme Demo">
+  <meta itemprop="description" content="无意中在知乎上看到了这样一个话题：如何在 GitHub 上写博客？ 于是开始自己捣腾，现在分享一下自己搭建博客的一点心得和笔记。 GitHub Pages 给我的感觉就是，给我一个">
+  <meta itemprop="image" content="http://wfxiong1990.github.io/img/author.jpg">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@coderzh" />
+  <meta name="twitter:title" content="利用GitHub Pages 和 Hexo 搭建静态博客 - Hugo PacMan Theme Demo" />
+  
+  <meta name="twitter:description" content="">
+  
+  <link rel="shortcut icon" href="http://wfxiong1990.github.io/img/favicon.ico"/>
+  <link rel="apple-touch-icon" href="http://wfxiong1990.github.io/apple-touch-icon.png" />
+  <link rel="apple-touch-icon-precomposed" href="http://wfxiong1990.github.io/apple-touch-icon.png" />
+  <link rel="stylesheet" href="http://wfxiong1990.github.io/highlight/styles/github.css">
+  <script src="http://wfxiong1990.github.io/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="http://wfxiong1990.github.io/font/hack/css/hack.min.css">
+  <link rel="stylesheet" href="http://wfxiong1990.github.io/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div>
+  
+  <div id="imglogo">
+    <a href="http://wfxiong1990.github.io/"><img src="http://wfxiong1990.github.io/img/logo.svg" alt="Hugo PacMan Theme Demo" title="Hugo PacMan Theme Demo"/></a>
+  </div>
+  
+  <div id="textlogo">
+    <h1 class="site-name"><a href="http://wfxiong1990.github.io/" title="Hugo PacMan Theme Demo">Hugo PacMan Theme Demo</a></h1>
+    <h2 class="blog-motto">subtitle</h2>
+  </div>
+  <div class="navbar"><a class="navbutton navmobile" href="#" title="menu"></a></div>
+  <nav class="animated">
+    <ul>
+      
+      <li><a href="/">首页</a></li>
+      
+      <li><a href="/about">关于</a></li>
+      
+      <li>
+        <form class="search" method="get" action="https://www.google.com/search">
+          <div>
+            <input type="text" id="search" name="q" placeholder="搜索">
+          </div>
+        </form>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  </header>
+  <div id="container">
+    <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody">
+    <header class="article-info clearfix">
+  <h1 itemprop="name">
+      <a href="http://wfxiong1990.github.io/post/how-to-build-a-blog-system-using-github-and-hexo/" title="利用GitHub Pages 和 Hexo 搭建静态博客" itemprop="url">利用GitHub Pages 和 Hexo 搭建静态博客</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://blog.coderzh.com" title=""></a>
+    
+  </p>
+  <p class="article-time">
+    <time datetime="2014-10-12 00:51:20 &#43;0000 UTC" itemprop="datePublished">2014年10月12日</time>
+  </p>
+</header>
+
+	<div class="article-content">
+    
+    
+
+<p>无意中在知乎上看到了这样一个话题：<a href="http://www.zhihu.com/question/20962496">如何在 GitHub 上写博客？</a> 于是开始自己捣腾，现在分享一下自己搭建博客的一点心得和笔记。</p>
+
+<h2 id="github-pages">GitHub Pages</h2>
+
+<p>给我的感觉就是，给我一个index.html，我能给你变出一个世界，其实不管什么语言什么架构搭建的项目，只要把index.html 放上去，并且本地能正常运行，这就是<strong>静态网页程序</strong>。那么github pages就能显示出你想要的网页来，一般github pages 的地址是<code>yourname.github.io</code>,*yourname*是你的github用户名，貌似一个github账号对应一个github pages，如果需要从自己的域名进入，那么只需要在项目的source目录下加一个CNAME文件即可，如果是Mac下面或者Linux的环境，一行命令搞定：</p>
+
+<p><code>vim CNAME</code> 或者<code>touch CNAME</code></p>
+
+<p>记得用vim的时候记得:wq 保存退出。</p>
+
+<blockquote>
+<p>ps:由于缓存的原因，第一次上传github pages 项目的时候需要等待几分钟左右，才能在yourname.github.io上看到。</p>
+</blockquote>
+
+<h2 id="git">Git</h2>
+
+<p>说到GitHub，顾名思义，git是一个分布式的版本控制系统，这里不详细描述，hub在geek的心里就是集线器的意思吧，所以要在github上写博客，首先要学会用git，git不需要很深入的学习，但基本的命令还是要掌握的，这里推荐一下<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743858312764dca7ad6d0754f76aa562e3789478044000">廖雪峰的Git教程</a>。</p>
+
+<p>首先你的电脑上要有git环境，如果输入<code>git --version</code>或者<code>whois git</code>如下图所示<img src="http://ww3.sinaimg.cn/mw690/6788d2b1jw1elr9bsup7zj20jf0fpwg2.jpg" alt="git in terminal" />，那就是ok的，否则，需要在<a href="http://git-scm.com/downloads">这里</a>下载对应系统的git安装包。</p>
+
+<p>Git的基础操作很简单，无非是<code>git init</code> ,<code>git add</code>,<code>git commit</code>,<code>git status</code>,<code>git push</code>和<code>git pull</code>，对应的操作是当前文件夹初始化、把文件纳入版本管理，提交更改，检查状态，push status的变化到远程repository，把远程repository的更新拉下来，但是git 最牛的地方在对分支的管理，这方便我还掌握不够，大家可以参考上文中提到的廖雪峰的Git教程。</p>
+
+<h2 id="hexo">Hexo</h2>
+
+<p><a href="http://hexo.io/">Hexo</a>是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。顾名思义，它是基于Node.js的，所以先要有Node.js的环境，<a href="http://www.infoq.com/cn/articles/nodejs-npm-install-config">安装教程在此</a>。由于本人的macbook上安装了<a href="http://brew.sh/index_zh-cn.html">Homebrew</a>，所以安装node只需要以下命令：</p>
+
+<pre><code>$ brew update
+$ brew install node
+</code></pre>
+
+<p>不得不赞，macbook真的是开发者最好的玩具，比逼格更有生产力啊。
+如果是windows，如果在cmd命令行里面输入<code>npm --version</code>没有显示，那么去<a href="http://nodejs.org/download/">这里</a>下载nodejs的安装包，安装之。</p>
+
+<p>Hexo虽然基于Node.js但是我们不需要了解Node.js编程，需要的只是4条命令：</p>
+
+<pre><code>$ hexo g  ##生成静态博客的public文件夹，也就是要上传到GitHub Pages的那部分文件
+$ hexo s  ##运行本地的博客程序，比如你设置的端口号是4000的话，浏览器打开localhost:4000 就可以看到你搭建的博客是什么样子的了
+$ hexo d  ##上传本地的修改到远程仓库 前提是你在_config.yml里面设置了git仓库的路径和分支
+$ hexo n  ##新建一篇博客，就是new一个*.md的markdown文件，如果是在Mac下面可以直接用Mou程序打开
+</code></pre>
+
+<p>看上去简单吧～</p>
+
+<p>推荐本地运行的时候把日志打开，这样哪里缺文件配置有问题一目了然。</p>
+
+<pre><code>$ logger: false
+$ logger_format: dev
+</code></pre>
+
+<p>记住至少要在冒号后有一个空格，博客才能正确运行。</p>
+
+<h2 id="hexo主题优化">Hexo主题优化</h2>
+
+<p>本博客采用了<a href="https://github.com/A-limon/pacman">Pacman的主题</a>。<a href="http://yangjian.me/pacman/hello/introducing-pacman-theme/">介绍在此</a>，不得不说，这个主题很漂亮，给人眼前一亮的感觉。用这个主题只要把github上的资源通过<code>git clone</code>到<code>本地的hexo目录\themes</code>下面，改一下hexo的_config.yml：</p>
+
+<pre><code>  theme: pacman
+</code></pre>
+
+<p>就可以了。</p>
+
+<h2 id="markdown">Markdown</h2>
+
+<p>Markdown简直是程序猿的word编辑器，wikipedia里面介绍如下：</p>
+
+<blockquote>
+<p>Markdown 是一种轻量级标记语言，创始人为約翰·格魯伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。</p>
+</blockquote>
+
+<p>Markdown的学习可以参考作业部落的<a href="https://www.zybuluo.com/mdeditor">CMD Markdown</a>在线的Markdown编辑器，很快就能上手的。</p>
+
+<hr />
+
+<h2 id="域名申请和绑定">域名申请和绑定</h2>
+
+<p>很幸运，我通过github的student package 拿到了namecheap的一年 顶级域名 <code>xwf.me</code>的使用权，<a href="http://www.yd631.com/namecheap-free-me/">申请方法</a>。拿到后把该域名的URL Forwarding 改成如下即可：
+<img src="http://ww4.sinaimg.cn/mw690/6788d2b1gw1elm37g1b7gj20ju07zdgr.jpg" alt="image" /></p>
+
+<p>具体教程<a href="http://davidensinger.com/2013/03/setting-the-dns-for-github-pages-on-namecheap/">戳这里</a>。</p>
+
+<h2 id="小结">小结</h2>
+
+<p>自己搭建博客还是很拼的，各种google，百度还是算了，推荐一个网站：<a href="http://tmd123.com">通天塔</a>，把google镜像到AWS亚马逊云上面，速度上还是靠谱的，<del>隐私问题，反正应该比百度靠谱吧，我也不知道</del>。
+能有独立域名，网站还很干净，没广告，markdown熟练后也很方便，写博客也能慢慢改进自己描述问题不清楚，无法正确表达观点的问题。理科生，怀才不遇的大都连自己会啥都说不清楚。</p>
+
+<p>好了，本篇就到这里吧，谢谢观赏，我不是<a href="http://weibo.com/jiaoshoutv">叫兽易小星</a>，我从不做广告～</p>
+
+	</div>
+  <footer class="article-footer clearfix">
+  
+
+<div class="article-tags">
+  <span></span>
+  
+  <a href="http://wfxiong1990.github.io/tags/hexo">Hexo</a>
+  
+  <a href="http://wfxiong1990.github.io/tags/git">Git</a>
+  
+</div>
+
+
+
+
+
+  <div class="article-share" id="share">
+    <div data-url="http://wfxiong1990.github.io/post/how-to-build-a-blog-system-using-github-and-hexo/" data-title="利用GitHub Pages 和 Hexo 搭建静态博客" data-tsina="1816308191" class="share clearfix">
+    </div>
+  </div>
+</footer>
+
+	</article>
+  
+
+
+<section class="comment">
+<div id="disqus_thread"></div>
+</section>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = "http://wfxiong1990.github.io/post/how-to-build-a-blog-system-using-github-and-hexo/";
+this.page.identifier = "http://wfxiong1990.github.io/post/how-to-build-a-blog-system-using-github-and-hexo/";
+};
+(function() { 
+var d = document, s = d.createElement('script');
+
+s.src = '//coderzh.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+    <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+  
+
+
+
+  
+
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+      
+			<li><a href="http://wfxiong1990.github.io/tags/aria2" title="aria2">aria2<sup>1</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/beautifulsoup" title="beautifulsoup">beautifulsoup<sup>1</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/dietpi" title="dietpi">dietpi<sup>1</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/git" title="git">git<sup>1</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/hexo" title="hexo">hexo<sup>1</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/leetcode" title="leetcode">leetcode<sup>3</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/python" title="python">python<sup>6</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/raspberry-pi" title="raspberry-pi">raspberry-pi<sup>2</sup></a></li>
+      
+			<li><a href="http://wfxiong1990.github.io/tags/travel" title="travel">travel<sup>1</sup></a></li>
+      
+		</ul>
+</div>
+
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle">归档</p>
+    <ul class="archive-list">
+      
+      
+      <li class="archive-list-item">
+        <a class="archive-list-link" href="http://wfxiong1990.github.io/post/#2017-02">2017年02月</a><span class="archive-list-count">3</span>
+      </li>
+      
+      
+      <li class="archive-list-item">
+        <a class="archive-list-link" href="http://wfxiong1990.github.io/post/#2014-11">2014年11月</a><span class="archive-list-count">4</span>
+      </li>
+      
+      
+      <li class="archive-list-item">
+        <a class="archive-list-link" href="http://wfxiong1990.github.io/post/#2014-10">2014年10月</a><span class="archive-list-count">3</span>
+      </li>
+      
+    </ul>
+
+  </div>
+
+
+  
+
+<div class="tagcloudlist">
+  <p class="asidetitle">标签云</p>
+  <div class="tagcloudlist clearfix">
+    
+    <a href="http://wfxiong1990.github.io/tags/aria2" style="font-size: 12px;">aria2</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/beautifulsoup" style="font-size: 12px;">beautifulsoup</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/dietpi" style="font-size: 12px;">dietpi</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/git" style="font-size: 12px;">git</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/hexo" style="font-size: 12px;">hexo</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/leetcode" style="font-size: 12px;">leetcode</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/python" style="font-size: 12px;">python</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/raspberry-pi" style="font-size: 12px;">raspberry-pi</a>
+    
+    <a href="http://wfxiong1990.github.io/tags/travel" style="font-size: 12px;">travel</a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</aside>
+</div>
+
+  </div>
+  <footer><div id="footer" >
+  
+  <div class="line">
+    <span></span>
+    <div style='background:no-repeat url("http://wfxiong1990.github.io/img/author.jpg") left top;-webkit-background-size:6.875em 6.875em;-moz-background-size:6.875em 6.875em;background-size:6.875em 6.875em;' class="author" ></div>
+  </div>
+  
+  
+  <section class="info">
+    <p>Introduce1 <br/> Introduce2</p>
+  </section>
+  
+  <div class="social-font clearfix">
+    
+    <a href="http://weibo.com/coderzh" target="_blank" title="weibo"></a>
+    
+    
+    <a href="https://twitter.com/coderzh" target="_blank" title="twitter"></a>
+    
+    
+    <a href="https://github.com/coderzh" target="_blank" title="github"></a>
+    
+    
+    <a href="https://www.facebook.com/coderzh" target="_blank" title="facebook"></a>
+    
+    
+    <a href="https://www.linkedin.com/coderzh" target="_blank" title="linkedin"></a>
+    
+  </div>
+  <p class="copyright">Powered by <a href="http://gohugo.io" target="_blank" title="hugo">hugo</a> and Theme by <a href="https://github.com/coderzh/hugo-pacman-theme" target="_blank" title="hugo-pacman-theme">hugo-pacman-theme</a> © 2017
+    
+    <a href="http://wfxiong1990.github.io/" title="Hugo PacMan Theme Demo">Hugo PacMan Theme Demo</a>
+    
+  </p>
+</div>
+</footer>
+  <script src="http://wfxiong1990.github.io/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+done = false;
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  $('form.search').on('submit', function (event) {
+    if (false === done) {
+      event.preventDefault();
+      var orgVal = $(this).find('#search').val();
+      $(this).find('#search').val('site:http:\/\/wfxiong1990.github.io\/ ' + orgVal);
+      done = true;
+      $(this).submit();
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="http://wfxiong1990.github.io/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="http://wfxiong1990.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-10147768-2', 'auto');
+  ga('send', 'pageview');
+  $('#messagesbsb').remove();
+</script>
+
+
+
+</body>
+</html>
