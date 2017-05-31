@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry Pi on Hugo PacMan Theme Demo</title>
+    <link>http://wfxiong1990.github.io/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on Hugo PacMan Theme Demo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 04 Feb 2017 13:50:49 +0000</lastBuildDate>
+    
+	<atom:link href="http://wfxiong1990.github.io/tags/raspberry-pi/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在树莓派上使用aria2</title>
+      <link>http://wfxiong1990.github.io/post/using-aria2-on-raspberry-pi/</link>
+      <pubDate>Sat, 04 Feb 2017 13:50:49 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/using-aria2-on-raspberry-pi/</guid>
+      <description>认识aria2 国内最流行的网盘是什么？百度盘，各种资源分享，当年申请就有2T容量，不敢用作资料备份，但偶尔下下电影蛮好的。后来限制了下载速度</description>
+    </item>
+    
+    <item>
+      <title>树莓派精简系统DietPi入坑指南</title>
+      <link>http://wfxiong1990.github.io/post/setup-rpi-using-dietpi/</link>
+      <pubDate>Fri, 03 Feb 2017 22:46:10 +0000</pubDate>
+      
+      <guid>http://wfxiong1990.github.io/post/setup-rpi-using-dietpi/</guid>
+      <description>树莓派的官方系统是Raspbian，很稳定，https://www.raspberrypi.org/downloads/，默认不开启SSH，</description>
+    </item>
+    
+  </channel>
+</rss>
